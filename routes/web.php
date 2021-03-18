@@ -30,3 +30,7 @@ Route::post('/login',  [LoginController::class, 'store']); //Inheriting the name
 
 //Logout
 Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
