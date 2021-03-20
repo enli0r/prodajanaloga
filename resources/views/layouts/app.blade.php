@@ -6,14 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{config('app.name', 'SnapUp')}}</title>
 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <script src="{{ asset('js/app.js') }}"></script>
 
 </head>
 <body>
     @yield('content')
-    
-    
-    
 </body>
 </html>

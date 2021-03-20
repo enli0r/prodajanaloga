@@ -1,10 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-    @include('inc.navbar')
-    <div class="container">
-        @auth
-            <h1 class="m*-auto">Hello {{Auth::user()->username}}</h1>
-        @endauth
-    </div>
+    <header>
+        @include('inc.navbar')
+        @include('inc.carousel')
+        <h1>Hee</h1>
+    </header>
 @endsection

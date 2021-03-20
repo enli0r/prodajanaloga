@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light">
+<nav class="navbar navbar-expand-lg navbar-dark">
   <div class="container">
     <a class="navbar-brand" href="{{route('home')}}">kupovina<span>naloga</span></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,8 +18,7 @@
             
             <form action="{{route('logout')}}" method="POST">
                 @csrf
-
-                <button type="submit" class="btn nav-link py-0">Logout</button>
+                <button type="submit" class="btn nav-link py-0" id="logout">Logout</button>
             </form>
 
 
