@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\LogoutController;
@@ -34,3 +35,5 @@ Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+Route::get('/posts', [PostController::class, 'index'])->name('posts');
