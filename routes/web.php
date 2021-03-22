@@ -36,4 +36,5 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
+//Posts
 Route::get('/posts', [PostController::class, 'index'])->name('posts');

@@ -11,7 +11,6 @@ class Post extends Model
     use HasFactory;
 
     public function game(){
-        dd($this->hasOne(Game::class)->toSql());
         return $this->hasOne(Game::class);
     }
 }
