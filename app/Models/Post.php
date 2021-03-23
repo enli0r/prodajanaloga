@@ -11,6 +11,6 @@ class Post extends Model
     use HasFactory;
 
     public function game(){
-        return $this->hasOne(Game::class);
+        return $this->hasOne(Game::class, 'game_id'); //sigurno
     }
-}
+} 

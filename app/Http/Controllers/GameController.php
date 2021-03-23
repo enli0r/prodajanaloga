@@ -3,14 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\Game;
-use App\Models\Post;
 use Illuminate\Http\Request;
 
-class PostController extends Controller
+class GameController extends Controller
 {
 
     public function index(){
-        $game = Post::all();
-        dd($game);
-    }   
+        // $posts = Game::all();
+
+        // dd($posts);
+    }
+
 }
