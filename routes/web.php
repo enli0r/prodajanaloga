@@ -39,4 +39,4 @@ Route::group(['prefix' => 'admin'], function () {
 
 //Posts
 Route::get('/posts', [PostController::class, 'index'])->name('posts');
-Route::get('/posts/create', [PostController::class, 'createPost'])->name('createPost');
+Route::get('/posts/create', [PostController::class, 'create'])->name('createPost');

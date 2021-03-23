@@ -14,7 +14,7 @@ class PostController extends Controller
         dd($game);
     }  
     
-    public function createPost(){
-        return view('pages.createPost');
+    public function create(){
+        return view('pages.create');
     }   
 }
