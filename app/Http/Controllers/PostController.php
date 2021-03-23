@@ -10,7 +10,11 @@ class PostController extends Controller
 {
 
     public function index(){
-        $game = Post::all();
+        $game = Game::all()->where('id', 3);
         dd($game);
+    }  
+    
+    public function createPost(){
+        return view('pages.createPost');
     }   
 }
