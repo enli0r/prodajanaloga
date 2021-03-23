@@ -20,6 +20,6 @@ class DatabaseSeeder extends Seeder
         //Game::factory(10)->create();
         //Attributes::factory(10)->create();
         //Post::factory(10)->create();
-        //$this->call(PostSeeder::class);
+        $this->call(PostsSeeder::class);
     }
 }
