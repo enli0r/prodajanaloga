@@ -11,11 +11,16 @@ class PostController extends Controller
 
     public function index(){
         $posts = Post::all();
-        return view('pages.posts')->with('posts', $posts);
+        return view('posts.index')->with('posts', $posts);
     }  
     
-    public function store(){
-        return view('pages.create');
+    public function create(){
+        return view('posts.create');
+    }   
+
+
+    public function store(Request $request){
+        
     }   
 
 

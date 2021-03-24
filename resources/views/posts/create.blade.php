@@ -3,20 +3,16 @@
 @section('content')
 <div class="d-flex container justify-content-center my-2 flex-column">
 
+
+
+
+
+
     <div class="col-6 bg-light border rounded-lg bg-light text-secondary p-5 align-self-center">
-        <form action="{{route('createPost')}}" method="post" class="createPostForm">
+        
+
+        <form action="{{route('posts.create')}}" method="POST" class="createPostForm">
             @csrf
-
-            {{-- <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" class="form-control  @error('email') border border-danger @enderror" id="email" name="email" placeholder="Enter Email" value="{{old('email')}}">
-
-                @error('email')
-                <div class="mb-2 text-danger">
-                    {{$message}}
-                </div>
-                @enderror
-            </div> --}}
 
             <div class="form-group">
                 <input type="text" class="form-control" id="title" name="title" placeholder="Enter post title" value="{{old('title')}}">
@@ -73,7 +69,7 @@
 
 
             <button type="submit" class="btn btn-primary w-100">Create</button>
-        </form>
+        </form> 
     </div>
 </div>
 @endsection
