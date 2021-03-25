@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Game;
 use App\Models\Post;
+use App\Models\Attributes;
 use Illuminate\Http\Request;
+use PhpParser\Node\Attribute;
+use App\Models\AttributeValue;
 
 class PostController extends Controller
 {
@@ -20,7 +23,31 @@ class PostController extends Controller
 
 
     public function store(Request $request){
-        
+
+        $this->validate($request, [
+            'title' => 'required',
+            'description' => 'required',
+            'username' => 'required',
+            'price' => 'required',
+            'flexRadioDefault' => 'required',
+        ]);
+ 
+        $post = new Post;
+
+        $post->title = $request->input('title');
+        $post->description = $request->input('description');
+        $post->username = $request->input('username');
+        $post->price = $request->input('price');
+        $post->game_id = $request->input('flexRadioDefault');
+        $post->save();
+
+        $attributeValue = new AttributeValue;
+
+        $attributeValue->attribute_id = Attributes::where('game_id', $request->input('flexRadioDefault'))->first()->id;
+        $attributeValue->attribute_value = $request->input('attribute');
+        $attributeValue->save();
+
+        return view('posts.index');
     }   
 
 
