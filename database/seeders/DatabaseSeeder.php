@@ -17,9 +17,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        //Game::factory(10)->create();
-        //Attributes::factory(10)->create();
-        //Post::factory(10)->create();
-        $this->call(PostsSeeder::class);
+        //$this->call(GamesSeeder::class);
+        $this->call(AttributesSeeder::class);
     }
 }
