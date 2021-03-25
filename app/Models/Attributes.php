@@ -10,6 +10,9 @@ class Attributes extends Model
 {
     use HasFactory;
 
+    protected $table = 'attributes';
+
+
     public function game(){
         return $this->belongsTo(Game::class);
     }
