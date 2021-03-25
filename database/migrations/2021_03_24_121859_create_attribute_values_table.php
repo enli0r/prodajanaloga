@@ -17,6 +17,7 @@ class CreateAttributeValuesTable extends Migration
             $table->id();
             $table->string('attribute_value');
             $table->foreignId('attribute_id')->constrained();
+            $table->foreignId('post_id')->constrained();
             $table->timestamps();
         });
     }

@@ -45,10 +45,20 @@ class PostController extends Controller
 
         $attributeValue->attribute_id = Attributes::where('game_id', $request->input('flexRadioDefault'))->first()->id;
         $attributeValue->attribute_value = $request->input('attribute');
+        $attributeValue->post_id = $post->id;
         $attributeValue->save();
 
         return redirect()->route('home');
-    }   
+    }
+
+    public function filter(Request $request){
+        $division = $request->input('division');
+
+        $post_ids = AttributeValue::select('post_id')->where('attribute_value', $division)->get()->toArray();
+        $posts = Post::whereIn('id', $post_ids)->get();
+
+        return view('posts.index')->with('posts', $posts);
+    }
 
 
 }

@@ -21,8 +21,6 @@ class DatabaseSeeder extends Seeder
     {
         //$this->call(GamesSeeder::class);
         //$this->call(AttributesSeeder::class);
-        // Post::truncate();
-        // AttributeValue::truncate();
-        //User::truncate();
+        //Post::truncate();
     }
 }

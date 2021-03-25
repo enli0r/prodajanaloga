@@ -32,7 +32,7 @@
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" value="3">
-                    <label class="form-check-label" for="flexRadioDefault3">League of Legends</label>
+                    <label class="form-check-label" for="flexRadioDefault3">Fortnite</label>
                 </div>
             </div>
 

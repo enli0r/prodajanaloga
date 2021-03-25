@@ -17,4 +17,8 @@ class Post extends Model
     public function game(){
         return $this->hasOne(Game::class, 'game_id');
     }
+
+    public function attributeValue(){
+        return $this->hasManny(AttributeValue::class);
+    }
 } 
