@@ -47,7 +47,7 @@ class PostController extends Controller
         $attributeValue->attribute_value = $request->input('attribute');
         $attributeValue->save();
 
-        return view('posts.index');
+        return redirect()->route('home');
     }   
 
 
