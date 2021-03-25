@@ -4,5 +4,6 @@
     <header>
         @include('inc.navbar')
         @include('inc.carousel')
+        
     </header>
 @endsection
