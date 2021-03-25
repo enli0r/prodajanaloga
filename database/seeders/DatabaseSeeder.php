@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Game;
 use App\Models\Post;
+use App\Models\User;
 use App\Models\Attributes;
 use App\Models\AttributeValue;
 use Illuminate\Database\Seeder;
@@ -20,7 +21,8 @@ class DatabaseSeeder extends Seeder
     {
         //$this->call(GamesSeeder::class);
         //$this->call(AttributesSeeder::class);
-        Post::truncate();
-        AttributeValue::truncate();
+        // Post::truncate();
+        // AttributeValue::truncate();
+        //User::truncate();
     }
 }

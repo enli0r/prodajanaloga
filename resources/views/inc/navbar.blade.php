@@ -12,6 +12,11 @@
         </li>
 
           @auth
+
+            <li class="nav-item">
+              <a class="nav-link" href="{{route('posts.create')}}">Create post</a>
+            </li>
+
             <li class="nav-item py-0">
               <a class="nav-link py-0" href="{{route('login')}}">{{Auth::user()->username}}</a>
             </li>
