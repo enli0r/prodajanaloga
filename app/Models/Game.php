@@ -11,6 +11,10 @@ class Game extends Model
 {
     use HasFactory;
 
+    protected $table = 'games';
+
+    protected $fillable = ['name'];
+
     public function post(){
         return $this->hasMany(Post::class);
     }
