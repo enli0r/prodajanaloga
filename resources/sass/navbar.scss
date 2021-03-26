@@ -7,14 +7,14 @@
             font-size: 32px;
             font-weight: 600;
             letter-spacing: 1px;
-            color: white;
-            span{
-                color: $red;
-            }
+            color:lightgray;
         }
 
         .collapse ul li a{
-            color: white;
+            color: lightgray;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1px;
 
             &:hover{
                 color: $red;
@@ -23,11 +23,29 @@
         }
     }
 
-    #logout{
-        color: white;
+    #register{
+        color: lightgray;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        background: $matrix-green;
+        border-radius: 25px;
+        transition: transform 0.3s;
 
         &:hover{
-            color: $red;
+            transform: scale(1.1);
+        }
+
+    }
+
+    #logout{
+        color: lightgray;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1px;
+
+
+        &:hover{
             transition: all 0.3s;
         }
     }

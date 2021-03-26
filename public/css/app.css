@@ -10081,63 +10081,77 @@ header .carousel #slide3 {
   font-size: 32px;
   font-weight: 600;
   letter-spacing: 1px;
-  color: white;
-}
-.navbar .container .navbar-brand span {
-  color: #a51129;
+  color: lightgray;
 }
 .navbar .container .collapse ul li a {
-  color: white;
+  color: lightgray;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 .navbar .container .collapse ul li a:hover {
   color: #a51129;
   transition: all 0.3s;
 }
+.navbar #register {
+  color: lightgray;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  background: #03a062;
+  border-radius: 25px;
+  transition: transform 0.3s;
+}
+.navbar #register:hover {
+  transform: scale(1.1);
+}
 .navbar #logout {
-  color: white;
+  color: lightgray;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 .navbar #logout:hover {
-  color: #a51129;
   transition: all 0.3s;
 }
 
 .posts-body {
-  background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.5)), url("https://i.ibb.co/kQC2nbd/gamer-background.jpg");
-  background-size: cover;
+  background: black;
   background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
 }
-.posts-body .posts-container {
-  display: flex;
+.posts-body .container {
   justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
 }
-.posts-body .posts-container .post {
+.posts-body .container .card {
+  max-width: 250px;
+  height: 300px;
   margin-top: 50px;
-  max-width: 270px;
-  background: black;
-  z-index: 100;
-  transition: transform 0.5s;
+  border-radius: 20px;
+  transition: transform 0.3s;
 }
-.posts-body .posts-container .post:hover {
+.posts-body .container .card:hover {
   transform: translateY(-10px);
   cursor: pointer;
 }
-.posts-body .posts-container .post img {
-  height: 200px;
-  width: 100%;
+.posts-body .container .card img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 150px;
 }
-.posts-body .posts-container .post .post-info {
-  padding: 10px;
-  color: white;
-  letter-spacing: 1px;
-}
-.posts-body .posts-container .post .post-info h4 {
+.posts-body .container .card .card-body h4 {
   text-align: center;
-  font-weight: bold;
-  font-size: 16px;
   text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
 }
-.posts-body .posts-container .post .post-info p {
+.posts-body .container .card .card-body .card-text {
   font-size: 14px;
   font-weight: 300;
+  letter-spacing: 1px;
 }

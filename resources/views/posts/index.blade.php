@@ -7,34 +7,39 @@
     <div class="posts-body">
         <div class="container posts-container">
             @foreach ($posts as $post)
-                <div class="post"> 
+
+                <div class="card"> 
                     @if ($post->game_id == 1)
-                        <a href=""><img src="https://i.ibb.co/x8Kqd1c/lol-post-slika.jpg" alt="lol_slika"></a>
-                        <div class="post-info">
-                            <h4 class="post-title">{{$post->title}}</h4>
-                            <p class="post-username">Username: {{$post->username}}</p>
-                            <p class="post-division">Division:</p>
-                        </div>
+                        <img class="card-img-top" src="https://i.ibb.co/x8Kqd1c/lol-post-slika.jpg" alt="lol_slika">    
                     @endif
 
                     @if ($post->game_id == 2)
-                        <a href=""><img src="https://i.ibb.co/VjZH79Y/csgo-post-slika.jpg" alt="lol_slika"></a>
-                        <div class="post-info">
-                            <h4 class="post-title">{{$post->title}}</h4>
-                            <p class="post-username">Username: {{$post->username}}</p>
-                            <p class="post-rank">Rank:</p>
-                        </div>
+                        <img src="https://i.ibb.co/VjZH79Y/csgo-post-slika.jpg" alt="lol_slika">
                     @endif
 
                     @if ($post->game_id == 3)
-                        <a href=""><img src="https://i.ibb.co/NY6WXyL/fortnite-post-slika.jpg" alt="fortnite_slika"></a>
-                        <div class="post-info">
-                            <h4 class="post-title">{{$post->title}}</h4>
-                            <p class="post-username">Username: {{$post->username}}</p>
-                        </div>
+                        <img src="https://i.ibb.co/NY6WXyL/fortnite-post-slika.jpg" alt="fortnite_slika">
                     @endif
+
+                    <div class="card-body">
+                        <h4 class="post-title">{{$post->title}}</h4>
+                        <p class="card-text">Username: {{$post->username}}</p>
+
+                        @if ($post->game_id == 1)
+                            <p class="card-text">Division:</p>
+                        @endif
+
+                        @if ($post->game_id == 2)
+                            <p class="card-text">Rank:</p>
+                        @endif
+
+                        @if ($post->game_id == 3)
+                            <p class="card-text">Level:</p>
+                        @endif
                 </div>
-            @endforeach
-        </div>
+            </div>
+        @endforeach
     </div>
 @endsection
+
+
