@@ -1,4 +1,4 @@
-<div class="sidebar">
+{{-- <div class="filterWindow">
   <form action="{{route('posts')}}" method="POST" class="filterPostsForm">
     @csrf
 
@@ -33,10 +33,8 @@
           </select>
     </div>
 
-
+    <label>Enter price range</label>
     <div class="form-group">
-      <label>Enter price range</label>
-
       <label for="minPrice">Min</label>
       <input type="number" name="minPrice">
 
@@ -44,9 +42,6 @@
       <input type="number" name="maxPrice">
     </div>
 
-
-
-
     <button type="submit" class="btn btn-primary w-100">Filter</button>
 </form>
-</div>
+</div> --}}

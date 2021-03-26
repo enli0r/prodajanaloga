@@ -10006,33 +10006,6 @@ h3 {
   font-family: "Nunito Sans", sans-serif;
 }
 
-header .navbar {
-  background: black;
-}
-header .navbar .container .navbar-brand {
-  text-transform: uppercase;
-  font-size: 32px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: white;
-}
-header .navbar .container .navbar-brand span {
-  color: #a51129;
-}
-header .navbar .container .collapse ul li a {
-  color: white;
-}
-header .navbar .container .collapse ul li a:hover {
-  color: #a51129;
-  transition: all 0.3s;
-}
-header .navbar #logout {
-  color: white;
-}
-header .navbar #logout:hover {
-  color: #a51129;
-  transition: all 0.3s;
-}
 header .carousel {
   height: 650px;
   transform-style: preserve-3d;
@@ -10099,29 +10072,72 @@ header .carousel #slide3 {
     padding-top: auto;
   }
 }
-.sidebar .slider {
-  -webkit-appearance: none;
+.navbar {
+  background: black;
+  height: 75px;
+}
+.navbar .container .navbar-brand {
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: white;
+}
+.navbar .container .navbar-brand span {
+  color: #a51129;
+}
+.navbar .container .collapse ul li a {
+  color: white;
+}
+.navbar .container .collapse ul li a:hover {
+  color: #a51129;
+  transition: all 0.3s;
+}
+.navbar #logout {
+  color: white;
+}
+.navbar #logout:hover {
+  color: #a51129;
+  transition: all 0.3s;
+}
+
+.posts-body {
+  background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.5)), url("https://i.ibb.co/kQC2nbd/gamer-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.posts-body .posts-container {
+  display: flex;
+  justify-content: space-between;
+}
+.posts-body .posts-container .post {
+  margin-top: 50px;
+  max-width: 270px;
+  background: black;
+  z-index: 100;
+  transition: transform 0.5s;
+}
+.posts-body .posts-container .post:hover {
+  transform: translateY(-10px);
+  cursor: pointer;
+}
+.posts-body .posts-container .post img {
+  height: 200px;
   width: 100%;
-  height: 15px;
-  border-radius: 5px;
-  background: #d3d3d3;
-  outline: none;
-  opacity: 0.7;
-  transition: opacity 0.2s;
 }
-.sidebar .slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: #4CAF50;
-  cursor: pointer;
+.posts-body .posts-container .post .post-info {
+  padding: 10px;
+  color: white;
+  letter-spacing: 1px;
 }
-.sidebar .slider::-webkit-slider-thumb::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: #4CAF50;
-  cursor: pointer;
+.posts-body .posts-container .post .post-info h4 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.posts-body .posts-container .post .post-info p {
+  font-size: 14px;
+  font-weight: 300;
 }

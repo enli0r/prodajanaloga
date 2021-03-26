@@ -3,40 +3,6 @@
 }
 
 header{
-    .navbar{
-        background: black;
-        .container{
-            .navbar-brand{
-                text-transform: uppercase;
-                font-size: 32px;
-                font-weight: 600;
-                letter-spacing: 1px;
-                color: white;
-                span{
-                    color: $red;
-                }
-            }
-
-            .collapse ul li a{
-                color: white;
-
-                &:hover{
-                    color: $red;
-                    transition: all 0.3s;
-                }
-            }
-        }
-
-        #logout{
-            color: white;
-
-            &:hover{
-                color: $red;
-                transition: all 0.3s;
-            }
-        }
-    }
-
     //Carousel
     .carousel{
         height: 650px;
