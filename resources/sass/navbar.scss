@@ -1,5 +1,5 @@
 .navbar{
-    background: black;
+    background: transparent;
     height: 75px;
     .container{
         .navbar-brand{
@@ -15,28 +15,71 @@
             font-size: 14px;
             font-weight: 600;
             letter-spacing: 1px;
+            transition: all 0.3s;
+            position: relative;
 
             &:hover{
-                color: $red;
-                transition: all 0.3s;
+                color: white;
+            }
+
+            &::after{
+                content: " ";
+                background: white;
+                position: absolute;
+                left: 50%;
+                bottom: 0;
+                height: 3px;
+                width: 0;
+                transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            }
+
+            &:hover:after{
+                width: 80%;
+                left: 10%;
             }
         }
     }
 
     #register{
-        color: lightgray;
+        color: rgb(0,128,128);
         font-size: 14px;
+        padding: auto 5px;
         font-weight: 600;
         letter-spacing: 1px;
-        background: $matrix-green;
-        border-radius: 25px;
-        transition: transform 0.3s;
+        border: 2px solid rgb(0,128,128);
+        border-radius: 20px;
+        position: relative;
+        transition: 0.4s all ease;
+        z-index: 1;
 
         &:hover{
-            transform: scale(1.1);
+            color: white;
         }
 
+        &::before{
+            content: '';
+            position: absolute;
+            z-index: -1;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 103%;
+            border-radius: 16px;
+            background: rgb(0,128,128);
+            transform: translate(-50%,-50%);
+            transition: width 0.4s ease 0s;
+            
+        }
+
+        &::after{
+            display: none;
+        }
+
+        &:hover:before{
+            width: 100%;
+        }
     }
+
 
     #logout{
         color: lightgray;

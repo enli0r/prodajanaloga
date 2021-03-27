@@ -59,14 +59,9 @@
                   </select>
             </div>
 
-
             <textarea name="description" class="form-control" id="description"></textarea>
-
             
             <input type="text" class="form-control" id="price" name="price" placeholder="$" value="{{old('price')}}">
-
-
-
 
             <button type="submit" class="btn btn-primary w-100">Create</button>
         </form> 

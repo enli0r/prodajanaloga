@@ -23,5 +23,10 @@ class AttributesSeeder extends Seeder
             'name' => 'rank',
             'game_id' => 2
         ]);
+
+        Attributes::create([
+            'name' => 'level',
+            'game_id' => 3
+        ]);
     }
 }

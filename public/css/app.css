@@ -10072,8 +10072,12 @@ header .carousel #slide3 {
     padding-top: auto;
   }
 }
-.navbar {
+header {
   background: black;
+}
+
+.navbar {
+  background: transparent;
   height: 75px;
 }
 .navbar .container .navbar-brand {
@@ -10088,22 +10092,59 @@ header .carousel #slide3 {
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 1px;
+  transition: all 0.3s;
+  position: relative;
 }
 .navbar .container .collapse ul li a:hover {
-  color: #a51129;
-  transition: all 0.3s;
+  color: white;
+}
+.navbar .container .collapse ul li a::after {
+  content: " ";
+  background: white;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  height: 3px;
+  width: 0;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+.navbar .container .collapse ul li a:hover:after {
+  width: 80%;
+  left: 10%;
 }
 .navbar #register {
-  color: lightgray;
+  color: teal;
   font-size: 14px;
+  padding: auto 5px;
   font-weight: 600;
   letter-spacing: 1px;
-  background: #03a062;
-  border-radius: 25px;
-  transition: transform 0.3s;
+  border: 2px solid teal;
+  border-radius: 20px;
+  position: relative;
+  transition: 0.4s all ease;
+  z-index: 1;
 }
 .navbar #register:hover {
-  transform: scale(1.1);
+  color: white;
+}
+.navbar #register::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 103%;
+  border-radius: 16px;
+  background: teal;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease 0s;
+}
+.navbar #register::after {
+  display: none;
+}
+.navbar #register:hover:before {
+  width: 100%;
 }
 .navbar #logout {
   color: lightgray;
@@ -10115,8 +10156,13 @@ header .carousel #slide3 {
   transition: all 0.3s;
 }
 
+.background-container {
+  background: #141414;
+  background-repeat: repeat-y;
+  z-index: -1;
+}
+
 .posts-body {
-  background: black;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -10132,14 +10178,15 @@ header .carousel #slide3 {
   margin-top: 50px;
   border-radius: 20px;
   transition: transform 0.3s;
+  background: rgba(0, 128, 128, 0.5);
+  color: white;
 }
 .posts-body .container .card:hover {
   transform: translateY(-10px);
   cursor: pointer;
 }
 .posts-body .container .card img {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-radius: 20px;
   height: 150px;
 }
 .posts-body .container .card .card-body h4 {
@@ -10152,6 +10199,12 @@ header .carousel #slide3 {
 }
 .posts-body .container .card .card-body .card-text {
   font-size: 14px;
-  font-weight: 300;
-  letter-spacing: 1px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+.posts-body .container .csgo {
+  background: rgba(255, 165, 0, 0.5);
+}
+.posts-body .container .fortnite {
+  background: rgba(128, 0, 128, 0.5);
 }
