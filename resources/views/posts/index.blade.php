@@ -4,7 +4,6 @@
     @include('inc.filterWindow')
 
     <div class="background-container">
-        {{-- <img id="keyboard" src="https://i.ibb.co/C71mdN5/keyboard.png" alt=""> --}}
         @include('inc.navbar')
         <div class="posts-body">
             <div class="container posts-container">

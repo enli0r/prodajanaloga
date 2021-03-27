@@ -10,17 +10,20 @@
             color:lightgray;
         }
 
-        .collapse ul li a{
+        .nav-link{
             color: lightgray;
             font-size: 14px;
             font-weight: 600;
             letter-spacing: 1px;
             transition: all 0.3s;
-            position: relative;
 
             &:hover{
                 color: white;
             }
+        }
+
+        .hoverUnderline{            
+            position: relative;
 
             &::after{
                 content: " ";
@@ -38,58 +41,63 @@
                 left: 10%;
             }
         }
+
+        .social{
+            i{
+                font-size: 20px;
+
+                &:hover{
+                    cursor: pointer;
+                }
+
+                &::after{
+                    display: none;
+                }
+            }
+        }
     }
 
     #register{
-        color: rgb(0,128,128);
+        color: lightgray;
         font-size: 14px;
         padding: auto 5px;
         font-weight: 600;
         letter-spacing: 1px;
-        border: 2px solid rgb(0,128,128);
-        border-radius: 20px;
+        transition: all 0.3s;
+        background: rgb(0,128,128);
+        border-radius: 8px;
+        padding-left: 15px;
+        padding-right: 15px;
         position: relative;
-        transition: 0.4s all ease;
-        z-index: 1;
+
+        &:hover{
+            color:white;
+        }
+    }
+
+    #login{
+        color: lightgray;
+        font-size: 14px;
+        padding: auto 5px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        transition: all 0.3s;
 
         &:hover{
             color: white;
         }
-
-        &::before{
-            content: '';
-            position: absolute;
-            z-index: -1;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 103%;
-            border-radius: 16px;
-            background: rgb(0,128,128);
-            transform: translate(-50%,-50%);
-            transition: width 0.4s ease 0s;
-            
-        }
-
-        &::after{
-            display: none;
-        }
-
-        &:hover:before{
-            width: 100%;
-        }
     }
 
-
     #logout{
-        color: lightgray;
+        color: rgb(30,30,30);
         font-size: 14px;
         font-weight: 600;
         letter-spacing: 1px;
+    }
 
-
-        &:hover{
-            transition: all 0.3s;
+    #profile{
+        i{
+            font-size: 20px;
         }
     }
 }

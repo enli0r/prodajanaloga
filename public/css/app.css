@@ -10087,18 +10087,20 @@ header {
   letter-spacing: 1px;
   color: lightgray;
 }
-.navbar .container .collapse ul li a {
+.navbar .container .nav-link {
   color: lightgray;
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 1px;
   transition: all 0.3s;
-  position: relative;
 }
-.navbar .container .collapse ul li a:hover {
+.navbar .container .nav-link:hover {
   color: white;
 }
-.navbar .container .collapse ul li a::after {
+.navbar .container .hoverUnderline {
+  position: relative;
+}
+.navbar .container .hoverUnderline::after {
   content: " ";
   background: white;
   position: absolute;
@@ -10108,58 +10110,69 @@ header {
   width: 0;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
 }
-.navbar .container .collapse ul li a:hover:after {
+.navbar .container .hoverUnderline:hover:after {
   width: 80%;
   left: 10%;
 }
+.navbar .container .social i {
+  font-size: 20px;
+}
+.navbar .container .social i:hover {
+  cursor: pointer;
+}
+.navbar .container .social i::after {
+  display: none;
+}
 .navbar #register {
-  color: teal;
+  color: lightgray;
   font-size: 14px;
   padding: auto 5px;
   font-weight: 600;
   letter-spacing: 1px;
-  border: 2px solid teal;
-  border-radius: 20px;
+  transition: all 0.3s;
+  background: teal;
+  border-radius: 8px;
+  padding-left: 15px;
+  padding-right: 15px;
   position: relative;
-  transition: 0.4s all ease;
-  z-index: 1;
 }
 .navbar #register:hover {
   color: white;
 }
-.navbar #register::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 103%;
-  border-radius: 16px;
-  background: teal;
-  transform: translate(-50%, -50%);
-  transition: width 0.4s ease 0s;
+.navbar #login {
+  color: lightgray;
+  font-size: 14px;
+  padding: auto 5px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.3s;
 }
-.navbar #register::after {
-  display: none;
-}
-.navbar #register:hover:before {
-  width: 100%;
+.navbar #login:hover {
+  color: white;
 }
 .navbar #logout {
-  color: lightgray;
+  color: #1e1e1e;
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 1px;
 }
-.navbar #logout:hover {
-  transition: all 0.3s;
+.navbar #profile i {
+  font-size: 20px;
 }
 
 .background-container {
-  background: #141414;
+  background: #1e1e1e;
   background-repeat: repeat-y;
+  background-attachment: fixed;
   z-index: -1;
+}
+
+#keyboard {
+  position: absolute;
+  right: 10%;
+  top: 30%;
+  width: 50%;
+  height: 50%;
 }
 
 .posts-body {

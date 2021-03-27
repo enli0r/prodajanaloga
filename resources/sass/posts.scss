@@ -1,21 +1,27 @@
 .background-container{
-    background: rgb(20,20,20);
+    background: rgb(30,30,30);
     background-repeat: repeat-y;
+    background-attachment: fixed;
     z-index: -1;
 }
 
+#keyboard{
+    position: absolute;
+    right: 10%;
+    top: 30%;
+    width: 50%;
+    height: 50%;
+}
 
 .posts-body{
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    
 
     .container{
         justify-content: space-between;
         display: flex;
         flex-wrap: wrap;
-
 
         .card{
             max-width: 250px;
