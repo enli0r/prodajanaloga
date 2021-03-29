@@ -10036,13 +10036,13 @@ header .carousel .carousel-caption {
   bottom: initial;
 }
 header .carousel #slide1 {
-  background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.5)), url("https://i.ibb.co/L1PqvLN/viego.jpg");
+  background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.5), black), url("https://i.ibb.co/L1PqvLN/viego.jpg");
 }
 header .carousel #slide2 {
-  background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.5)), url("https://i.ibb.co/DtzXr4Q/csgo.jpg");
+  background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.5), black), url("https://i.ibb.co/DtzXr4Q/csgo.jpg");
 }
 header .carousel #slide3 {
-  background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.5)), url("https://i.ibb.co/jG3sj5S/fortnite.jpg");
+  background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.5), black), url("https://i.ibb.co/jG3sj5S/fortnite.jpg");
 }
 
 .carousel-caption {
@@ -10074,6 +10074,7 @@ header .carousel #slide3 {
 }
 header {
   background: black;
+  height: 100vh;
 }
 
 .navbar {
@@ -10161,10 +10162,8 @@ header {
 }
 
 .background-container {
-  background: #1e1e1e;
-  background-repeat: repeat-y;
-  background-attachment: fixed;
-  z-index: -1;
+  background: linear-gradient(135deg, black 40%, #3c3c3c 40%);
+  background-repeat: repeat;
 }
 
 #keyboard {
@@ -10176,8 +10175,6 @@ header {
 }
 
 .posts-body {
-  background-repeat: no-repeat;
-  background-size: cover;
   height: 100vh;
 }
 .posts-body .container {

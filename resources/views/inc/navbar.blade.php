@@ -45,12 +45,7 @@
       
       <ul class="navbar-nav ml-auto">
         @auth
-          {{-- <li class="nav-item">
-            <a class="nav-link" id="profile" href="{{route('login')}}">
-              {{Auth::user()->username}} <i class="fas fa-user"></i>
-            </a>
-          </li> --}}
-          
+        
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{Auth::user()->username}} <i class="fas fa-user"></i></a>
             <div class="dropdown-menu" aria-labelledby="dropdown07">

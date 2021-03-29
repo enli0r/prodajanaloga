@@ -1,8 +1,6 @@
 .background-container{
-    background: rgb(30,30,30);
-    background-repeat: repeat-y;
-    background-attachment: fixed;
-    z-index: -1;
+    background: linear-gradient(135deg, rgb(0, 0, 0) 40%, rgb(60,60,60) 40%);
+    background-repeat: repeat;
 }
 
 #keyboard{
@@ -14,8 +12,6 @@
 }
 
 .posts-body{
-    background-repeat: no-repeat;
-    background-size: cover;
     height: 100vh;
 
     .container{
