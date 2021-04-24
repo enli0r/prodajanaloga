@@ -8,11 +8,12 @@
             <div class="crud">
                 <a href="{{route('posts.edit', $post->id)}}">Edit</a>
 
+                {{-- DELETE --}}
                 <form action="{{route('posts.destroy', $post->id)}}" method="POST"> 
                     @csrf
                     @method('DELETE')
 
-                    <button type="submit" name="delete" class="btn btn-danger">Delete</button>
+                    <button type="submit" name="delete" class="btn">Delete</button>
                 </form>
 
             </div>
