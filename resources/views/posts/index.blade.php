@@ -9,40 +9,27 @@
             <div class="container posts-container">
                 @foreach ($posts as $post)
                     @if ($post->game_id == 1)
-                        <div class="card lol"> 
-                            <img class="card-img-top" src="https://i.ibb.co/x8Kqd1c/lol-post-slika.jpg" alt="lol_slika">   
-                            
-                            <div class="card-body">
-                                <h4 class="post-title">{{$post->title}}</h4>
-                                <p class="card-text">Username: {{$post->username}}</p>
-                                <p class="card-text">Division:</p>
+                            <div class="card lol"> 
+                                <img class="card-img-top" src="https://i.ibb.co/x8Kqd1c/lol-post-slika.jpg" alt="lol_slika">   
+                                
+                                @include('inc.cardBody')
                             </div>
-                        </div>
-
                     @endif
 
                     @if ($post->game_id == 2)
-                        <div class="card csgo"> 
-                            <img src="https://i.ibb.co/VjZH79Y/csgo-post-slika.jpg" alt="lol_slika">
+                            <div class="card csgo"> 
+                                <img src="https://i.ibb.co/VjZH79Y/csgo-post-slika.jpg" alt="lol_slika">
 
-                            <div class="card-body">
-                                <h4 class="post-title">{{$post->title}}</h4>
-                                <p class="card-text">Username: {{$post->username}}</p>
-                                <p class="card-text">Rank:</p>
+                                @include('inc.cardBody')
                             </div>
-                        </div>
                     @endif
 
                     @if ($post->game_id == 3)
-                        <div class="card fortnite"> 
-                            <img src="https://i.ibb.co/NY6WXyL/fortnite-post-slika.jpg" alt="fortnite_slika">
+                            <div class="card fortnite"> 
+                                <img src="https://i.ibb.co/NY6WXyL/fortnite-post-slika.jpg" alt="fortnite_slika">
 
-                            <div class="card-body">
-                                <h4 class="post-title">{{$post->title}}</h4>
-                                <p class="card-text">Username: {{$post->username}}</p>
-                                <p class="card-text">Level:</p>
+                                @include('inc.cardBody')
                             </div>
-                        </div>
                     @endif
                 @endforeach
             </div>

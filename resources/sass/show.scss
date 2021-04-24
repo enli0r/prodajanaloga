@@ -1,0 +1,103 @@
+*{
+    letter-spacing: 1.5px;
+}
+
+#showPost{
+    background: linear-gradient(135deg, rgb(0, 0, 0) 40%, rgb(60,60,60) 40%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+
+
+    #gameHeader{
+        height: 250px;
+
+        .col{
+            display: flex;
+            border-radius: 20px;
+            align-items: center;
+            justify-content: center;
+            margin: 0 0.75rem;
+            
+            h1{
+                color: white;
+                font-size: 35px;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+        }
+    }
+
+    
+
+    #lol_col{
+        background:linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.ibb.co/L1PqvLN/viego.jpg');
+    }
+
+    #csgo_col{
+        background:linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.ibb.co/DtzXr4Q/csgo.jpg');
+    }
+
+    #fortnite_col{
+        background:linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.ibb.co/jG3sj5S/fortnite.jpg');
+    }
+
+
+    .postInfo{
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .coll{
+            border-radius: 20px;
+            margin-top: 20px;
+            h2{
+                font-size: 20px;
+                text-transform: capitalize;
+                font-weight: 600;
+                padding: 15px 15px 0 15px;
+                text-align: center;
+            }
+
+            .info{
+                padding: 15px;
+                h4{
+                    text-transform: capitalize;
+                    font-weight: 600;
+                    font-size: 18px;
+
+                    span{
+                        font-size: 18px;
+                        text-transform: none;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+
+        .account-col{
+            background: rgb(0,120,120);
+            width: 650px;
+            h2, .accountInfo{
+                color: white;
+            }
+        }
+
+        .user-col{
+            background: lightgray;
+            min-width: 400px;
+            h2, .userInfo{
+                color: rgb(50,50,50);
+            }
+        }
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .account-col, .user-col{
+        width: 100% !important;
+        min-width: 0;
+    }
+}
+

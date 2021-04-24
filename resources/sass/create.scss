@@ -1,0 +1,107 @@
+#createPost{
+    background: linear-gradient(135deg, rgb(0, 0, 0) 40%, rgb(60,60,60) 40%);
+    height: 100vh;
+    background-size: cover;
+
+    .formContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .tab{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 600px;
+            flex-wrap: wrap;
+            .tablinks{
+                border-radius: 20px;
+                color: white;
+                background: rgb(0,120,120);
+                font-size: 14px;
+                padding: 10px 15px;
+                letter-spacing: 1.5px;
+                margin: 10px 0;
+
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+
+            .active{
+                background: lightgray;
+                color: rgb(50,50,50);            }
+
+        }
+
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+            min-width: 500px;
+            border: none;
+            padding: 0;
+            margin-top: 50px;
+            animation: fadeEffect 0.5s;
+
+            form{
+                padding: 20px;
+                color: rgb(60,60,60);
+                border-radius: 20px;
+                background: rgba(255,255,255,0.5);
+
+                .formField{
+                    border: none;
+                    border-radius: 20px;
+                    padding: 10px 15px;
+                }
+
+                input[type="radio"] {
+                    visibility: hidden;
+                }
+                
+                  .radioLabel{
+                    border-radius: 20px;
+                    color: white;
+                    background: rgb(0,120,120);
+                    font-size: 14px;
+                    padding: 10px 15px;
+                    letter-spacing: 1.5px;
+                    transition: all 0.3s;
+
+                    &:hover{
+                        cursor: pointer;
+                    }
+                  }
+
+                  .radio-group .form-check input[type="radio"]:checked + label {
+                    background-color:lightgray;
+                    color: rgb(50,50,50);
+                }
+
+                .radio-group{
+                    display: flex;
+                    width: 250px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                }
+
+                .radio-group .form-check{
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadeEffect{
+    0%{
+        opacity: 0;
+    }
+    100%    {
+        opacity: 1;
+    }
+}

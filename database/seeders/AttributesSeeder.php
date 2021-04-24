@@ -20,6 +20,13 @@ class AttributesSeeder extends Seeder
         ]);
 
         Attributes::create([
+            'name' => 'server',
+            'game_id' => 1
+        ]);
+
+
+
+        Attributes::create([
             'name' => 'rank',
             'game_id' => 2
         ]);

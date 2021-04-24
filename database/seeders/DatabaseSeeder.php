@@ -19,8 +19,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        //$this->call(GamesSeeder::class);
-        //$this->call(AttributesSeeder::class);
-        //Post::truncate();
+        $this->call(GamesSeeder::class);
+        $this->call(AttributesSeeder::class);
+        //$this->call(PostsSeeder::class);
     }
 }

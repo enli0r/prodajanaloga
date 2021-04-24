@@ -20,6 +20,7 @@ class CreatePostsTable extends Migration
             $table->string('username');
             $table->unsignedDecimal('price');
             $table->foreignId('game_id')->constrained();
+            $table->foreignId('user_id')->constrained();
             $table->timestamps();
         });
     }

@@ -26,7 +26,7 @@ class PostFactory extends Factory
             'description' => "post_description:".$this->faker->name,
             'price' => rand(1,200),
             'username' => "username:".$this->faker->name,
-            'game_id' => rand(1,10),
+            'game_id' => rand(1,3),
         ];
     }
 }

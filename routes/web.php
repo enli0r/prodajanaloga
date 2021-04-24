@@ -33,17 +33,14 @@ Route::post('/login',  [LoginController::class, 'store']); //Inheriting the name
 //Logout
 Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
 
-Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
-});
 
 //Posts
-
-
 Route::group(['prefix' => 'posts'], function(){
     Route::get('/', [PostController::class, 'index'])->name('posts');
     Route::post('/', [PostController::class, 'filter']);
     Route::get('/create', [PostController::class, 'create'])->name('posts.create')->middleware('auth');
-    Route::post('/create', [PostController::class, 'store']);
-    
+    Route::post('/create', [PostController::class, 'store']);    
+    Route::get('/{id}', [PostController::class, 'show'])->name('posts.show');
+    Route::get('/{id}/edit', [PostController::class, 'edit']);
+    Route::put('/{id}', [PostController::class, 'update'])->name('posts.update');
 });

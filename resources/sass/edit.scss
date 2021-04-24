@@ -1,0 +1,67 @@
+.tab{
+    .disabled{
+        background: gray !important;
+    }
+}
+
+
+.tabcontent-edit{
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    min-width: 500px;
+    border: none;
+    padding: 0;
+    margin-top: 50px;
+    animation: fadeEffect 0.5s;
+    display: block;
+
+    form{
+        padding: 20px;
+        color: rgb(60,60,60);
+        border-radius: 20px;
+        background: rgba(255,255,255,0.5);
+
+        .formField{
+            border: none;
+            border-radius: 20px;
+            padding: 10px 15px;
+        }
+
+        input[type="radio"] {
+            visibility: hidden;
+        }
+        
+            .radioLabel{
+            border-radius: 20px;
+            color: white;
+            background: rgb(0,120,120);
+            font-size: 14px;
+            padding: 10px 15px;
+            letter-spacing: 1.5px;
+            transition: all 0.3s;
+
+            &:hover{
+                cursor: pointer;
+            }
+            }
+
+            .radio-group .form-check input[type="radio"]:checked + label {
+            background-color:lightgray;
+            color: rgb(50,50,50);
+        }
+
+        .radio-group{
+            display: flex;
+            width: 250px;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .radio-group .form-check{
+            padding: 0;
+        }
+    }
+}

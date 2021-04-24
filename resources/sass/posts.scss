@@ -1,32 +1,29 @@
 .background-container{
     background: linear-gradient(135deg, rgb(0, 0, 0) 40%, rgb(60,60,60) 40%);
-    background-repeat: repeat;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-#keyboard{
-    position: absolute;
-    right: 10%;
-    top: 30%;
-    width: 50%;
-    height: 50%;
-}
+
 
 .posts-body{
-    height: 100vh;
-
-    .container{
-        justify-content: space-between;
+    .posts-container{
+        justify-content: flex-start;
         display: flex;
         flex-wrap: wrap;
+        gap: 35px;
+
 
         .card{
             max-width: 250px;
-            height: 300px;
-            margin-top: 50px;
+            min-height: 360px;
+            margin-top: 30px;
+            margin-bottom: 30px;
             border-radius: 20px;
             transition: transform 0.3s;
-            background: rgba(0,128,128,0.5);
             color: white;
+            
+
             &:hover{
                 transform: translateY(-10px);
                 cursor: pointer;
@@ -38,6 +35,20 @@
             }
 
             .card-body{
+                display: flex;
+                flex-direction: column;
+                a{
+                    color: white;
+                    text-decoration: none;
+                    transition: all 0.3s;
+                    
+                    &:hover{
+                        color: rgba(200,200,200);
+                        text-decoration: none;
+
+                    }
+                }
+
                 h4{
                     text-align: center;
                     text-transform: uppercase;
@@ -52,15 +63,21 @@
                     font-weight: bold;
                     letter-spacing: 1.5px;
                 }
+
             }
         }
 
+        .lol{
+            background: rgb(0, 96, 128);
+        }
+
         .csgo{
-            background: rgba(255,165,0,0.5);
+            background: rgb(204, 122, 0);
+
         }
         
         .fortnite{
-            background: rgba(128,0,128,0.5);
+            background: purple
         }
 
     }
