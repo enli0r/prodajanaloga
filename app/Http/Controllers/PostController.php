@@ -134,7 +134,19 @@ class PostController extends Controller
         }
 
         return redirect(route('posts.show', $id));
+    }
 
+    public function destroy($id){
+         $post = Post::find($id);
+         $attributeValues = AttributeValue::where('post_id', $post->id)->get();
+
+         foreach($attributeValues as $value){
+             $value->delete();
+         }
+
+         $post->delete();
+
+         return redirect(route('posts'));
     }
 
 

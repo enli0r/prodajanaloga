@@ -6,7 +6,15 @@
         <div class="container" id="gameHeader-container">
 
             <div class="crud">
-                <a href="{{$post->id}}/edit">Edit</a>
+                <a href="{{route('posts.edit', $post->id)}}">Edit</a>
+
+                <form action="{{route('posts.destroy', $post->id)}}" method="POST"> 
+                    @csrf
+                    @method('DELETE')
+
+                    <button type="submit" name="delete" class="btn btn-danger">Delete</button>
+                </form>
+
             </div>
 
             <div class="row" id="gameHeader">
