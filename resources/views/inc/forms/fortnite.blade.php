@@ -24,7 +24,7 @@
     <textarea name="description" class="form-control formField" id="description">{{old('description')}}</textarea>
     
     {{-- Price --}}
-    <input type="text" calass="form-control formField" id="price" name="price" placeholder="$" value="{{old('price')}}">
+    <input type="text" class="form-control formField" id="price" name="price" placeholder="$" value="{{old('price')}}">
 
     {{-- Submit --}}
     <button type="submit" name="submit" value="3" class="btn btn-primary w-100">Create</button>
