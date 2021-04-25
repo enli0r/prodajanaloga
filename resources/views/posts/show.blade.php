@@ -5,18 +5,22 @@
         @include('inc.navbar');
         <div class="container" id="gameHeader-container">
 
-            <div class="crud">
-                <a href="{{route('posts.edit', $post->id)}}">Edit</a>
+            @auth
+                @if (Auth::id() == $post->user_id)
+                    <div class="crud">
+                        <a href="{{route('posts.edit', $post->id)}}">Edit</a>
 
-                {{-- DELETE --}}
-                <form action="{{route('posts.destroy', $post->id)}}" method="POST"> 
-                    @csrf
-                    @method('DELETE')
+                        {{-- DELETE --}}
+                        <form action="{{route('posts.destroy', $post->id)}}" method="POST"> 
+                            @csrf
+                            @method('DELETE')
 
-                    <button type="submit" name="delete" class="btn">Delete</button>
-                </form>
+                            <button type="submit" name="delete" class="btn">Delete</button>
+                        </form>
 
-            </div>
+                    </div>
+                @endif
+            @endauth
 
             <div class="row" id="gameHeader">
                 @if ($post->game_id == 1)
