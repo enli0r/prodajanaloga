@@ -47,15 +47,19 @@
         @auth
         
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{Auth::user()->username}} <i class="fas fa-user"></i></a>
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown07"  role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{Auth::user()->username}} <i class="fas fa-user"></i>
+            </a>
+
             <div class="dropdown-menu" aria-labelledby="dropdown07">
               <form action="{{route('logout')}}" method="POST" class="logoutForm">
                 @csrf
                 <button type="submit" class="dropdown-item" id="logout">Logout</button>
               </form>
+
+              <a href="#" class="dropdown-item">My posts</a>
             </div>
           </li>
-
         @endauth
         
         @guest
@@ -70,14 +74,3 @@
     </div>
   </div>
 </nav>
-
-
-{{-- <li class="nav-item dropdown">
-  <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{Auth::user()->username}} <i class="fas fa-user"></i></a>
-  <div class="dropdown-menu" aria-labelledby="dropdown07">
-    <form action="{{route('logout')}}" method="POST" class="logoutForm">
-      @csrf
-      <button type="submit" class="dropdown-item" id="logout">Logout</button>
-    </form>
-  </div>
-</li> --}}

@@ -88,11 +88,22 @@
         }
     }
 
-    #logout{
-        color: rgb(30,30,30);
-        font-size: 14px;
-        font-weight: 600;
-        letter-spacing: 1px;
+
+    .dropdown-menu{
+        .dropdown-item{
+            color: rgb(30,30,30);
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1px;
+    
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        
+        #logout{
+            font-weight: bold;
+        }
     }
 
     #profile{

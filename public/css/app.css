@@ -148,11 +148,17 @@ header {
 .navbar #login:hover {
   color: white;
 }
-.navbar #logout {
+.navbar .dropdown-menu .dropdown-item {
   color: #1e1e1e;
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 1px;
+}
+.navbar .dropdown-menu .dropdown-item:hover {
+  cursor: pointer;
+}
+.navbar .dropdown-menu #logout {
+  font-weight: bold;
 }
 .navbar #profile i {
   font-size: 20px;
