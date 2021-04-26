@@ -45,3 +45,7 @@ Route::group(['prefix' => 'posts'], function(){
     Route::put('/{id}', [PostController::class, 'update'])->name('posts.update');
     Route::delete('/{id}', [PostController::class, 'destroy'])->name('posts.destroy');
 });
+
+Route::get('/chat', function (){
+    return view('pages.chat');
+});
