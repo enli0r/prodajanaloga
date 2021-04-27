@@ -35,4 +35,9 @@ class MessageSent implements ShouldBroadcast
     {
         return new PrivateChannel('chat');
     }
+
+    public function boradcastAs()
+    {
+        return 'message-sent';
+    }
 }

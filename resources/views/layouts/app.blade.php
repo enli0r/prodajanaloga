@@ -21,7 +21,7 @@
         });
 
         var channel = pusher.subscribe('chat');
-        channel.bind('my-event', function(data) {
+        channel.bind('message-sent', function(data) {
         alert(JSON.stringify(data));
         });
     </script>
