@@ -20,7 +20,7 @@
         cluster: 'eu'
         });
 
-        var channel = pusher.subscribe('my-channel');
+        var channel = pusher.subscribe('chat');
         channel.bind('my-event', function(data) {
         alert(JSON.stringify(data));
         });

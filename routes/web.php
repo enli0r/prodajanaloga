@@ -1,5 +1,6 @@
 <?php
 
+use App\Events\MessageSent;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\PostController;
@@ -48,4 +49,16 @@ Route::group(['prefix' => 'posts'], function(){
 
 Route::get('/chat', function (){
     return view('pages.chat');
+});
+
+Route::get('/sender', function(){
+    return view('pages.sender');
+})->name('chat.sender');
+
+Route::post('/sender', function(){
+    $message = request()->message;
+
+
+    event(new MessageSent($message));
+
 });
