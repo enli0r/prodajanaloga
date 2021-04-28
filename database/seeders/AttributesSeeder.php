@@ -25,7 +25,6 @@ class AttributesSeeder extends Seeder
         ]);
 
 
-
         Attributes::create([
             'name' => 'rank',
             'game_id' => 2

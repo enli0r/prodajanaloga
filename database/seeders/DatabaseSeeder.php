@@ -9,6 +9,8 @@ use App\Models\Attributes;
 use App\Models\AttributeValue;
 use Illuminate\Database\Seeder;
 use Database\Seeders\GamesSeeder;
+use Database\Seeders\UsersSeeder;
+use Database\Seeders\MessagesSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -19,8 +21,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(GamesSeeder::class);
-        $this->call(AttributesSeeder::class);
+        $this->call(UsersSeeder::class);
+        $this->call(MessagesSeeder::class);
         //$this->call(PostsSeeder::class);
     }
 }

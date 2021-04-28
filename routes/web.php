@@ -4,6 +4,7 @@ use App\Events\MessageSent;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\ChatsController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\LogoutController;
@@ -47,9 +48,7 @@ Route::group(['prefix' => 'posts'], function(){
     Route::delete('/{id}', [PostController::class, 'destroy'])->name('posts.destroy');
 });
 
-Route::get('/chat', function (){
-    return view('pages.chat');
-});
+Route::get('/chat', [ChatsController::class, 'index']);
 
 Route::get('/sender', function(){
     return view('pages.sender');

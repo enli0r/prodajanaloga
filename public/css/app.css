@@ -477,3 +477,55 @@ header {
 .tabcontent-edit form .radio-group .form-check {
   padding: 0;
 }
+
+#chatPage {
+  background: black;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+}
+#chatPage .cnt1 {
+  display: flex;
+  border: 1px solid lightgray;
+  border-radius: 20px;
+  margin: 20px auto;
+}
+#chatPage .cnt1 .userList {
+  padding: 35px;
+  height: 700px;
+  overflow-y: scroll;
+  width: 600px;
+}
+#chatPage .cnt1 .userList::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: lightgray;
+}
+#chatPage .cnt1 .userList::-webkit-scrollbar {
+  width: 12px;
+  background-color: #F5F5F5;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+#chatPage .cnt1 .userList::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #555;
+}
+#chatPage .cnt1 .userList .user {
+  border-radius: 20px;
+  padding: 20px;
+  color: white;
+  font-size: 14px;
+  background: #006080;
+}
+#chatPage .cnt1 .currentChat-container {
+  width: 100%;
+  padding: 35px;
+  height: 700px;
+}
+#chatPage .cnt1 .currentChat-container .currentChat {
+  border-radius: 20px;
+  border: 1px solid #3c3c3c;
+  height: 100%;
+}
