@@ -168,6 +168,7 @@ header {
   background: linear-gradient(135deg, black 40%, #3c3c3c 40%);
   background-repeat: no-repeat;
   background-attachment: fixed;
+  height: 100vh;
 }
 
 .posts-body .posts-container {
@@ -227,6 +228,13 @@ header {
 }
 .posts-body .posts-container .fortnite {
   background: purple;
+}
+
+#search-container input {
+  border: none;
+  border-radius: 20px;
+  padding: 10px 15px;
+  font-size: 14px;
 }
 
 * {
@@ -484,48 +492,42 @@ header {
   background-attachment: fixed;
   height: 100vh;
 }
-#chatPage .cnt1 {
+#chatPage .userList-container {
   display: flex;
   border: 1px solid lightgray;
   border-radius: 20px;
   margin: 20px auto;
 }
-#chatPage .cnt1 .userList {
+#chatPage .userList-container .userList {
   padding: 35px;
   height: 700px;
   overflow-y: scroll;
   width: 600px;
 }
-#chatPage .cnt1 .userList::-webkit-scrollbar-track {
+#chatPage .userList-container .userList::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   background-color: lightgray;
 }
-#chatPage .cnt1 .userList::-webkit-scrollbar {
+#chatPage .userList-container .userList::-webkit-scrollbar {
   width: 12px;
   background-color: #F5F5F5;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
-#chatPage .cnt1 .userList::-webkit-scrollbar-thumb {
+#chatPage .userList-container .userList::-webkit-scrollbar-thumb {
   border-radius: 10px;
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #555;
 }
-#chatPage .cnt1 .userList .user {
+#chatPage .userList-container .userList .user {
   border-radius: 20px;
   padding: 20px;
   color: white;
   font-size: 14px;
   background: #006080;
+  cursor: pointer;
 }
-#chatPage .cnt1 .currentChat-container {
-  width: 100%;
-  padding: 35px;
-  height: 700px;
-}
-#chatPage .cnt1 .currentChat-container .currentChat {
-  border-radius: 20px;
-  border: 1px solid #3c3c3c;
-  height: 100%;
+#chatPage .userList-container .userList .active {
+  background: #1a98ff;
 }

@@ -14,11 +14,11 @@ class AttributeValue extends Model
     protected $fillable = ['attribute_value', 'attribute_id'];
     
     public function attribute(){
-        return $this->belongsTo(Attribute::class, 'attribute_id');
+        return $this->belongsTo(Attribute::class);
     }
 
     public function post(){
-        return $this->belongsTo(Post::class, 'post_id');
+        return $this->belongsTo(Post::class);
     }
     
 }

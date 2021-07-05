@@ -1,6 +1,4 @@
-@extends('layouts.app')
-
-@section('content')
+<x-layout>
     <div class="d-flex container justify-content-center my-2">
         <div class="col-6 bg-light border rounded-lg bg-light text-secondary p-5">
             <h3 class="mb-3 text-center">Register</h3>
@@ -61,4 +59,4 @@
             </form>
         </div>
     </div>
-@endsection
+</x-layout>

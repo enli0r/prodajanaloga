@@ -12,8 +12,11 @@ class Attributes extends Model
 
     protected $table = 'attributes';
 
+    public function attributeValues(){
+        return $this->hasMany(AttributeValue::class);
+    }
 
     public function game(){
-        return $this->belongsTo(Game::class);
+        return $this->belongsTo(Game::class, 'game_id');
     }
 }

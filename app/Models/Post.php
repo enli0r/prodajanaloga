@@ -16,14 +16,31 @@ class Post extends Model
     protected $fillable = ['title', 'description', 'username', 'price', 'game_id'];
 
     public function user(){
-        return $this->hasOne(User::class, 'user_id');
+        return $this->belongsTo(User::class);
     }
 
     public function game(){
-        return $this->hasOne(Game::class, 'game_id');
+        return $this->belongsTo(Game::class);
     }
 
-    public function attributeValue(){
-        return $this->hasManny(AttributeValue::class);
+    public function attributeValues(){
+        return $this->hasMany(AttributeValue::class);
     }
+
+    public function scopeFilter($query, array $filters){
+        $query->when($filters['search'] ?? false, fn($query, $search)=>
+            $query
+                ->where('title', 'like', '%' . $search . '%')
+                ->orWhere('description', 'like', '%' . $search . '%')
+        );
+
+
+        $query->when($filters['game'] ?? false, fn($query, $game)=>
+            $query
+                ->whereHas('game', fn($query)=>
+                    $query->where('name', $game)
+            )
+        );
+    }
+
 } 

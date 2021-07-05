@@ -2,8 +2,8 @@
     background: linear-gradient(135deg, rgb(0, 0, 0) 40%, rgb(60,60,60) 40%);
     background-repeat: no-repeat;
     background-attachment: fixed;
+    height: 100vh;
 }
-
 
 
 .posts-body{
@@ -80,5 +80,14 @@
             background: purple
         }
 
+    }
+}
+
+#search-container{
+    input{
+        border: none;
+        border-radius: 20px;
+        padding: 10px 15px;
+        font-size: 14px;
     }
 }

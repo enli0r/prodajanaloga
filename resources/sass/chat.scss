@@ -4,7 +4,7 @@
     background-attachment: fixed;
     height: 100vh;
 
-    .cnt1{
+    .userList-container{
         display: flex;
         border: 1px solid lightgray;
         border-radius: 20px;
@@ -46,23 +46,17 @@
                 color: white;
                 font-size: 14px;
                 background: rgb(0, 96, 128);
+                cursor: pointer;
+            }
+
+            .active{
+                background: rgb(26, 152, 255);
             }
         }
         
 
-        .currentChat-container{
-            width: 100%;
-            padding: 35px;
-            height: 700px;
+    
 
-            .currentChat{
-                border-radius: 20px;
-                border: 1px solid rgba(60,60,60);
-                height: 100%;
-                
-            }
-
-        }
     }
     
 

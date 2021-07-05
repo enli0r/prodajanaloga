@@ -3,10 +3,10 @@
 @section('content')
     <div id="chatPage">
         @include('inc.navbar')
-        <div class="container cnt1">
+        <div class="container userList-container">
             <div class="userList">
                 @foreach ($users as $user)
-                    <div class="user">
+                    <div class="user" id="{{$user->id}}">
                         <p>{{$user->name}}</p>
                         <p>{{$user->email}}</p>
                     </div>
@@ -14,11 +14,8 @@
                 @endforeach
             </div>
             
-    
-            <div class="currentChat-container">
-                <div class="currentChat">
-
-                </div>
+            <div id="messages">
+                
             </div>
         </div>
     </div>

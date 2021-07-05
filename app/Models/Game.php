@@ -15,12 +15,12 @@ class Game extends Model
 
     protected $fillable = ['name'];
 
-    public function post(){
-        return $this->belongsToMany(Post::class);
+    public function posts(){
+        return $this->hasMany(Post::class);
     }
 
-    public function attribute(){
-        return $this->hasMany(Attribute::class);
+    public function attributes(){
+        return $this->hasMany(Attributes::class);
     }
 
 }

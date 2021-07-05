@@ -1,8 +1,6 @@
-@extends('layouts.app')
-
-@section('content')
+<x-layout>
     <header>
-        @include('inc.navbar')
-        @include('inc.carousel')
+        <x-navbar />
+        <x-carousel />
     </header>
-@endsection
+</x-layout>
