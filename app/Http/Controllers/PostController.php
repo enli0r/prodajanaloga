@@ -7,6 +7,8 @@ use App\Models\Attributes;
 use Illuminate\Http\Request;
 use App\Models\AttributeValue;
 use App\Models\Game;
+use App\Models\PostAttributeValue;
+use Attribute;
 use Illuminate\Support\Facades\Auth;
 use PDO;
 
@@ -23,7 +25,14 @@ class PostController extends Controller
     }  
     
     public function create(){
-        return view('posts.create');
+
+        $divisions = AttributeValue::where('attribute_id', 1)->pluck('attribute_value');
+        $servers = AttributeValue::where('attribute_id', 2)->pluck('attribute_value');
+        $ranks = AttributeValue::where('attribute_id', 3)->pluck('attribute_value');
+
+        //dd($divisions);
+
+        return view('posts.create')->with(compact('divisions', 'ranks', 'servers'));
     }   
 
     public function store(Request $request){
@@ -46,17 +55,25 @@ class PostController extends Controller
 
         $post->save();
         
-
-
         $attributes = $post->game->attributes;
-       
-        foreach($attributes as $attribute){
-            $attributeValue = new AttributeValue;
 
-            $attributeValue->attribute_id = $attribute->id;
-            $attributeValue->post_id = $post->id;
-            $attributeValue->attribute_value = $request->input($attribute->name);
-            $attributeValue->save();
+        foreach($attributes as $attribute){
+ 
+            if($attribute->name == 'level'){
+                $attributeValue = new AttributeValue;
+
+                $attributeValue->attribute_id = $attribute->id;
+                $attributeValue->attribute_value = $request->input($attribute->name);
+                $attributeValue->save();
+            }
+
+            $attributeValue = AttributeValue::where('attribute_id', $attribute->id)->where('attribute_value', $request->input($attribute->name))->first();
+
+            $postAttributeValue = new PostAttributeValue;
+            $postAttributeValue->post_id = $post->id;
+            $postAttributeValue->attribute_id = $attribute->id;
+            $postAttributeValue->attribute_value_id = $attributeValue->id;
+            $postAttributeValue->save();
         }
 
         return redirect()->route('posts');
@@ -98,12 +115,16 @@ class PostController extends Controller
         $attributes = $post->game->attributes;
 
         foreach($attributes as $attribute){
-            $attributeValue = AttributeValue::where('attribute_id', $attribute->id)->where('post_id', $post->id)->first();
-            $attributeValue->attribute_value = $request->input($attribute->name);
-            $attributeValue->save();    
+
+            if($attribute->name == 'level'){
+                $attributeValue = AttributeValue::where('attribute_id', $attribute->id)->where('post_id', $post->id)->first();
+                $attributeValue->attribute_value = $request->input($attribute->name);
+                $attributeValue->save();   
+            }
+
         }
 
-        return redirect(route('posts.show', $post->title));
+        return redirect(route('posts.show', $post->id));
     }
 
     public function destroy($id){
@@ -121,13 +142,14 @@ class PostController extends Controller
     }
 
     public function getAccountInfo(Post $post){
-        $attributes = $post->game->attributes;
         $accountInfo = [];
-
         $accountInfo['title'] = $post->title;
+        $accountInfo['username'] = $post->username;
 
-        foreach($attributes as $attribute){
-            $accountInfo[$attribute->name] = AttributeValue::where('post_id', $post->id)->where('attribute_id', $attribute->id)->value('attribute_value');
+        $postAttributeValues = $post->postAttributeValues;
+
+        foreach($postAttributeValues as $postAttributeValue){
+            $accountInfo[$postAttributeValue->attribute->name] = $postAttributeValue->attributeValue->attribute_value;
         }
 
         $accountInfo['description'] = $post->description;

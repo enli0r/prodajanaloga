@@ -11,6 +11,7 @@ use Illuminate\Database\Seeder;
 use Database\Seeders\GamesSeeder;
 use Database\Seeders\UsersSeeder;
 use Database\Seeders\MessagesSeeder;
+use Database\Seeders\AttributeValuesSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -25,6 +26,7 @@ class DatabaseSeeder extends Seeder
         //$this->call(MessagesSeeder::class);
         $this->call(GamesSeeder::class);
         $this->call(AttributesSeeder::class);
+        $this->call(AttributeValuesSeeder::class);
         //$this->call(PostsSeeder::class);
     }
 }

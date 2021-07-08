@@ -20,5 +20,9 @@ class AttributeValue extends Model
     public function post(){
         return $this->belongsTo(Post::class);
     }
+
+    public function postAttributeValues(){
+        return $this->hasMany(PostAttributeValue::class);
+    }
     
 }

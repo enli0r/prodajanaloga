@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAttributeValuesTable extends Migration
+class CreatePostAttributeValuesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateAttributeValuesTable extends Migration
      */
     public function up()
     {
-        Schema::create('attribute_values', function (Blueprint $table) {
+        Schema::create('post_attribute_values', function (Blueprint $table) {
             $table->id();
-            $table->string('attribute_value');
+            $table->foreignId('post_id')->constrained();
             $table->foreignId('attribute_id')->constrained();
+            $table->foreignId('attribute_value_id')->constrained();
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateAttributeValuesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('attribute_values');
+        Schema::dropIfExists('post_attribute_values');
     }
 }

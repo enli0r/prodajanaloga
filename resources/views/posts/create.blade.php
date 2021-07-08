@@ -9,13 +9,14 @@
                 <span class="tablinks" onclick="openForm(event, 'fortnite')">Fortnite</span>
             </div>
               
-              <!-- Tab content -->
+            
+            <!-- Tab content -->
             <div id="lol" class="tabcontent">
-                <x-forms.lol />
+                <x-forms.lol :servers="$servers" :divisions="$divisions"/>
             </div>
             
             <div id="csgo" class="tabcontent">
-                <x-forms.csgo />
+                <x-forms.csgo :ranks="$ranks"/>
             </div>
             
             <div id="fortnite" class="tabcontent">

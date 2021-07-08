@@ -5,7 +5,7 @@
             @auth
                 @if (Auth::id() == $post->user_id)
                     <div class="crud">
-                        <a href="{{route('posts.edit', $post->title)}}">Edit</a>
+                        <a href="{{route('posts.edit', $post->id)}}">Edit</a>
 
                         {{-- DELETE --}}
                         <form action="{{route('posts.destroy', $post->id)}}" method="POST"> 

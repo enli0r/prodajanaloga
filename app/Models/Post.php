@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Models\Game;
 use App\Models\User;
+use App\Models\PostAttributeValue;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -26,6 +27,11 @@ class Post extends Model
     public function attributeValues(){
         return $this->hasMany(AttributeValue::class);
     }
+
+    public function postAttributeValues(){
+        return $this->hasMany(PostAttributeValue::class);
+    }
+
 
     public function scopeFilter($query, array $filters){
         $query->when($filters['search'] ?? false, fn($query, $search)=>

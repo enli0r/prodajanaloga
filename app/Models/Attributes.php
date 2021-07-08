@@ -19,4 +19,9 @@ class Attributes extends Model
     public function game(){
         return $this->belongsTo(Game::class, 'game_id');
     }
+
+    public function postAttributeValues(){
+        return $this->hasMany(PostAttributeValue::class);
+    }
+
 }
