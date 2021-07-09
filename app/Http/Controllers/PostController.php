@@ -18,10 +18,14 @@ class PostController extends Controller
     public function index(){
 
         $posts = Post::latest()->filter(request(['search', 'game']))->get();
-        $attributes = Attributes::all();
-        $attributeValues = AttributeValue::all();
+        $games = Game::all();
+        $currentCategory = Game::where('name', request('game'))->first();
 
-        return view('posts.index')->with(compact('posts', 'attributes', 'attributeValues')); 
+        foreach($posts as $post){
+            $accountInfo[$post->id] = $this->getAccountInfo($post);
+        }
+        
+        return view('posts.index')->with(compact('posts', 'games', 'currentCategory', 'accountInfo')); 
     }  
     
     public function create(){
@@ -29,8 +33,6 @@ class PostController extends Controller
         $divisions = AttributeValue::where('attribute_id', 1)->pluck('attribute_value');
         $servers = AttributeValue::where('attribute_id', 2)->pluck('attribute_value');
         $ranks = AttributeValue::where('attribute_id', 3)->pluck('attribute_value');
-
-        //dd($divisions);
 
         return view('posts.create')->with(compact('divisions', 'ranks', 'servers'));
     }   
@@ -91,8 +93,12 @@ class PostController extends Controller
         $accountInfo = $this->getAccountInfo($post);
         $games = Game::all();
 
+        $divisions = AttributeValue::where('attribute_id', 1)->pluck('attribute_value');
+        $servers = AttributeValue::where('attribute_id', 2)->pluck('attribute_value');
+        $ranks = AttributeValue::where('attribute_id', 3)->pluck('attribute_value');
 
-        return view('posts.edit')->with(compact('post', 'accountInfo', 'games'));
+
+        return view('posts.edit')->with(compact('post', 'accountInfo', 'games', 'divisions', 'servers', 'ranks'));
     }
 
     public function update(Request $request, $id){
@@ -115,12 +121,19 @@ class PostController extends Controller
         $attributes = $post->game->attributes;
 
         foreach($attributes as $attribute){
+            $postAttributeValue = PostAttributeValue::where('attribute_id', $attribute->id)->where('post_id', $post->id)->first();
 
             if($attribute->name == 'level'){
-                $attributeValue = AttributeValue::where('attribute_id', $attribute->id)->where('post_id', $post->id)->first();
+                $attributeValue = AttributeValue::find($postAttributeValue->attribute_value_id);
                 $attributeValue->attribute_value = $request->input($attribute->name);
                 $attributeValue->save();   
+
+            }else{
+                $postAttributeValue->attribute_value_id = AttributeValue::where('attribute_value', $request->input($attribute->name))->first()->id;
+                $postAttributeValue->save();
             }
+
+
 
         }
 

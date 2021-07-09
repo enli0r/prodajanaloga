@@ -10,7 +10,7 @@
                 </div>
 
                 <div class="tabcontent-edit">
-                    <x-forms.editForm :post="$post" :accountInfo="$accountInfo" />
+                    <x-forms.editForm :post="$post" :accountInfo="$accountInfo" :divisions="$divisions" :servers="$servers" :ranks="$ranks"/>
                 </div>
         </div>
     </div>

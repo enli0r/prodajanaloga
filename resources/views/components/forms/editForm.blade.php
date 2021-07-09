@@ -1,4 +1,4 @@
-@props(['post', 'accountInfo'])
+@props(['post', 'accountInfo', 'divisions', 'servers', 'ranks'])
 
 <form action="{{route('posts.update', $post->id)}}" method="POST" class="createPostForm">
     @csrf
@@ -16,11 +16,11 @@
     </div>
 
     @if ($post->game_id == 1)
-        <x-forms.editComponents.editLol :accountInfo="$accountInfo"/>
+        <x-forms.editComponents.editLol :accountInfo="$accountInfo" :divisions="$divisions" :servers="$servers"/>
     @endif
 
     @if ($post->game_id == 2)
-        <x-forms.editComponents.editCsgo  :accountInfo="$accountInfo"/>
+        <x-forms.editComponents.editCsgo  :accountInfo="$accountInfo" :ranks="$ranks"/>
     @endif
 
     @if ($post->game_id == 3)

@@ -230,11 +230,53 @@ header {
   background: purple;
 }
 
-#search-container input {
+#filter-container {
+  display: flex;
+  justify-content: space-between;
+}
+#filter-container .search-form input {
   border: none;
   border-radius: 20px;
   padding: 10px 15px;
   font-size: 14px;
+}
+#filter-container .categories {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+#filter-container .categories button {
+  font-size: 14px;
+  background: white;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  align-self: flex-start;
+}
+#filter-container .categories button:hover {
+  cursor: pointer;
+}
+#filter-container .categories #dropdown {
+  padding: 5px 0;
+  background: white;
+  border-radius: 5px;
+  position: absolute;
+  top: 50px;
+  z-index: 11;
+}
+#filter-container .categories #dropdown a {
+  display: block;
+  color: black;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1.5;
+}
+#filter-container .categories #dropdown a:hover {
+  text-decoration: none;
+  background: #f0f0f0;
 }
 
 * {
