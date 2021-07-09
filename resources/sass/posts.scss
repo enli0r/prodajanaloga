@@ -90,7 +90,7 @@
     .search-form{
         input{
             border: none;
-            border-radius: 20px;
+            border-radius: 5px;
             padding: 10px 15px;
             font-size: 14px;
         }
@@ -107,7 +107,7 @@
             background: white;
             color: black;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
             padding: 10px 15px;
             align-self: flex-start;
 
@@ -121,7 +121,7 @@
         #dropdown{
             padding: 5px 0;
             background: white;
-            border-radius: 5px;
+            border-radius: 8px;
             position: absolute;
             top: 50px;
             z-index: 11;

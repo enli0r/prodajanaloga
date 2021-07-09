@@ -1,1 +1,1 @@
-<button {{ $attributes->merge(['type' => 'submit', 'name'=>'submit', 'class'=>'btn btn-primary w-100' ]) }}>Create</button>
+<button {{ $attributes->merge(['type' => 'submit', 'name'=>'submit', 'class'=>'submit-button' ]) }}>Create</button>

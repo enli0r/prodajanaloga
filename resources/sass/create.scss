@@ -1,5 +1,7 @@
 #createPost{
-    background: linear-gradient(135deg, rgb(0, 0, 0) 40%, rgb(60,60,60) 40%);
+    // background: linear-gradient(135deg, rgb(0, 0, 0) 40%, rgb(60,60,60) 40%);
+    // background: white;
+    background: #fff;
     height: 100vh;
     background-size: cover;
 
@@ -15,7 +17,7 @@
             max-width: 600px;
             flex-wrap: wrap;
             .tablinks{
-                border-radius: 20px;
+                border-radius: 8px;
                 color: white;
                 background: rgb(0,120,120);
                 font-size: 14px;
@@ -37,31 +39,43 @@
         .tabcontent {
             display: none;
             padding: 6px 12px;
-            border: 1px solid #ccc;
-            border-top: none;
             min-width: 500px;
-            border: none;
             padding: 0;
             margin-top: 50px;
             animation: fadeEffect 0.5s;
 
             form{
-                padding: 20px;
-                color: rgb(60,60,60);
-                border-radius: 20px;
-                background: rgba(255,255,255,0.5);
+                background: white;
+                border-radius: 8px;
+                padding: 80px;
+                color: black;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+                .form-group{
+                    margin-bottom: 40px;
+
+                    label{
+                        font-size: 14px;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        letter-spacing: 1.2px;
+                        margin-bottom: 10px;
+                    }
+                }
+                
 
                 .formField{
+                    border-radius: 0;
                     border: none;
-                    border-radius: 20px;
-                    padding: 10px 15px;
+                    border-bottom: 2px solid lightgray;
+                    padding: 0;
                 }
 
                 input[type="radio"] {
                     visibility: hidden;
                 }
                 
-                  .radioLabel{
+                .radioLabel{
                     border-radius: 20px;
                     color: white;
                     background: rgb(0,120,120);
@@ -73,9 +87,9 @@
                     &:hover{
                         cursor: pointer;
                     }
-                  }
+                }
 
-                  .radio-group .form-check input[type="radio"]:checked + label {
+                .radio-group .form-check input[type="radio"]:checked + label {
                     background-color:lightgray;
                     color: rgb(50,50,50);
                 }
@@ -89,8 +103,17 @@
                     flex-wrap: wrap;
                 }
 
-                .radio-group .form-check{
+                .form-check{
                     padding: 0;
+                }
+
+                .submit-button{
+                    border-radius: 5px;
+                    background: rgba(0,128,128);
+                    color: white;
+                    border: none;
+                    padding: 10px 15px;
+                    margin-top: 20px;
                 }
             }
         }

@@ -1,11 +1,12 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
   <div class="container">
     <a class="navbar-brand" href="{{route('home')}}">KPN</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+    
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarsExample07">
+    <div class="navbar-collapse collapse" id="navbarsExample07">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
           <a class="nav-link hoverUnderline" href="{{route('home')}}">Home</a>
@@ -38,11 +39,8 @@
             <i class="fab fa-facebook social"></i>
           </a>
         </li>
-        
-
       </ul>
 
-      
       <ul class="navbar-nav ml-auto">
         @auth
         

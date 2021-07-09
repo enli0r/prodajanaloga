@@ -4,7 +4,7 @@
 }
 
 header .carousel {
-  height: 650px;
+  height: 500px;
   transform-style: preserve-3d;
 }
 header .carousel .carousel-item {
@@ -12,7 +12,7 @@ header .carousel .carousel-item {
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: center;
-  height: 650px;
+  height: 500px;
 }
 header .carousel .carousel-item h1 {
   font-size: 45px;
@@ -31,6 +31,11 @@ header .carousel .carousel-caption {
   top: 50%;
   transform: translateY(-50%);
   bottom: initial;
+}
+header .carousel .carousel-curve {
+  height: 150px;
+  background: black;
+  border-radius: 0 0 100% 100%;
 }
 header .carousel #slide1 {
   background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.5), black), url("https://i.ibb.co/L1PqvLN/viego.jpg");
@@ -71,12 +76,12 @@ header .carousel #slide3 {
 }
 header {
   background: black;
-  height: 100vh;
+  height: 700px;
+  border-radius: 0 0 15% 15%;
 }
 
 .navbar {
-  background: transparent;
-  height: 75px;
+  z-index: 11;
 }
 .navbar .container .navbar-brand {
   text-transform: uppercase;
@@ -236,7 +241,7 @@ header {
 }
 #filter-container .search-form input {
   border: none;
-  border-radius: 20px;
+  border-radius: 5px;
   padding: 10px 15px;
   font-size: 14px;
 }
@@ -251,7 +256,7 @@ header {
   background: white;
   color: black;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   padding: 10px 15px;
   align-self: flex-start;
 }
@@ -261,7 +266,7 @@ header {
 #filter-container .categories #dropdown {
   padding: 5px 0;
   background: white;
-  border-radius: 5px;
+  border-radius: 8px;
   position: absolute;
   top: 50px;
   z-index: 11;
@@ -367,7 +372,7 @@ header {
   }
 }
 #createPost {
-  background: linear-gradient(135deg, black 40%, #3c3c3c 40%);
+  background: #fff;
   height: 100vh;
   background-size: cover;
 }
@@ -384,7 +389,7 @@ header {
   flex-wrap: wrap;
 }
 #createPost .formContainer .tab .tablinks {
-  border-radius: 20px;
+  border-radius: 8px;
   color: white;
   background: #007878;
   font-size: 14px;
@@ -402,25 +407,34 @@ header {
 #createPost .formContainer .tabcontent {
   display: none;
   padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
   min-width: 500px;
-  border: none;
   padding: 0;
   margin-top: 50px;
   -webkit-animation: fadeEffect 0.5s;
           animation: fadeEffect 0.5s;
 }
 #createPost .formContainer .tabcontent form {
-  padding: 20px;
-  color: #3c3c3c;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.5);
+  background: white;
+  border-radius: 8px;
+  padding: 80px;
+  color: black;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+#createPost .formContainer .tabcontent form .form-group {
+  margin-bottom: 40px;
+}
+#createPost .formContainer .tabcontent form .form-group label {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  margin-bottom: 10px;
 }
 #createPost .formContainer .tabcontent form .formField {
+  border-radius: 0;
   border: none;
-  border-radius: 20px;
-  padding: 10px 15px;
+  border-bottom: 2px solid lightgray;
+  padding: 0;
 }
 #createPost .formContainer .tabcontent form input[type=radio] {
   visibility: hidden;
@@ -449,8 +463,16 @@ header {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-#createPost .formContainer .tabcontent form .radio-group .form-check {
+#createPost .formContainer .tabcontent form .form-check {
   padding: 0;
+}
+#createPost .formContainer .tabcontent form .submit-button {
+  border-radius: 5px;
+  background: teal;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 20px;
 }
 
 @-webkit-keyframes fadeEffect {

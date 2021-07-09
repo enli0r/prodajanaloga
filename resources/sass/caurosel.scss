@@ -1,7 +1,7 @@
 header{
     //Carousel
     .carousel{
-        height: 650px;
+        height: 500px;
         -webkit-transform-style: preserve-3d;
         -moz-transform-style: preserve-3d;
         transform-style: preserve-3d;
@@ -10,7 +10,7 @@ header{
             background-repeat: no-repeat;
             background-position-x: center;
             background-position-y: center;
-            height: 650px;
+            height: 500px;
             h1{
                 font-size: 45px;
                 font-weight: 600;
@@ -31,6 +31,12 @@ header{
             top: 50%;
             transform: translateY(-50%);
             bottom: initial;
+        }
+
+        .carousel-curve{
+            height: 150px;
+            background: black;
+            border-radius: 0 0 100% 100%;
         }
 
 
