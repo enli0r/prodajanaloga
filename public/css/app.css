@@ -77,7 +77,37 @@ header .carousel #slide3 {
 header {
   background: black;
   height: 700px;
-  border-radius: 0 0 15% 15%;
+  border-radius: 0 0 10% 10%;
+}
+
+main {
+  margin-top: 70px;
+}
+main .card-container {
+  flex-wrap: wrap;
+  padding: 20px;
+}
+main .card {
+  width: 450px;
+  height: 200px;
+  border-radius: 20px;
+  box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+  margin: 20px;
+  transition: all 0.3s;
+}
+main .card:hover {
+  transition: all 0.3s;
+}
+main .card a:hover {
+  text-decoration: none;
+}
+main .card .card-img-top {
+  border-radius: 20px;
+  width: 200px;
+}
+main .card .card-text {
+  text-decoration: none;
+  color: #1e1e1e;
 }
 
 .navbar {
@@ -418,7 +448,7 @@ header {
   border-radius: 8px;
   padding: 80px;
   color: black;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
 }
 #createPost .formContainer .tabcontent form .form-group {
   margin-bottom: 40px;

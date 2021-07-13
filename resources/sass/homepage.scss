@@ -7,5 +7,48 @@
 header{
     background: black;
     height: 700px;
-    border-radius: 0 0 15% 15%;
+    border-radius: 0 0 10% 10%;
+}
+
+main{
+    margin-top: 70px;
+    
+    .card-container{
+        //max-width: 1040px;
+        flex-wrap: wrap;
+        padding: 20px;
+
+    }
+
+
+
+    .card{
+        width: 450px;
+        height: 200px;
+        border-radius: 20px;
+        box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+        margin: 20px;
+        transition: all 0.3s;
+
+
+        &:hover{
+            transition: all 0.3s;
+        }
+        
+        a:hover{
+            text-decoration: none;
+        }
+        
+        .card-img-top{
+            border-radius: 20px;
+            width: 200px;
+        }
+
+        .card-text{
+            text-decoration: none;
+            color: rgb(30,30,30);
+        }
+
+        
+    }
 }
