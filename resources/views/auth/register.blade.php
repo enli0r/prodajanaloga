@@ -1,6 +1,7 @@
 <x-layout>
+<x-navbar />
     <div class="d-flex container justify-content-center my-2">
-        <div class="col-6 bg-light border rounded-lg bg-light text-secondary p-5">
+        <div class="authForm-container col-6 bg-light border rounded-lg bg-light text-secondary p-5">
             <h3 class="mb-3 text-center">Register</h3>
 
             <form action="{{route('register')}}" method="post">
@@ -56,6 +57,8 @@
                 </div>
 
                 <button type="submit" class="btn btn-primary w-100">Register</button>
+
+                <a href="{{ route('login') }}">Already have an account? Log in</a>
             </form>
         </div>
     </div>

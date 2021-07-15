@@ -4,7 +4,7 @@
     
     <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
-    </button>
+    </button> 
 
     <div class="navbar-collapse collapse" id="navbarsExample07">
       <ul class="navbar-nav mr-auto">
@@ -21,7 +21,7 @@
         </li>
       </ul>
 
-      <ul class="navbar-nav mx-auto">
+      {{-- <ul class="navbar-nav mx-auto">
         <li class="nav-item social">
           <a class="nav-link waves-effect waves-light">
             <i class="fab fa-instagram"></i>
@@ -39,7 +39,7 @@
             <i class="fab fa-facebook social"></i>
           </a>
         </li>
-      </ul>
+      </ul> --}}
 
       <ul class="navbar-nav ml-auto">
         @auth

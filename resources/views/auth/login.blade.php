@@ -1,4 +1,5 @@
 <x-layout>
+<x-navbar />
 <div class="d-flex container justify-content-center my-2 flex-column">
 
     @if (session('status'))
@@ -7,7 +8,7 @@
         </div>
     @endif
 
-    <div class="col-6 bg-light border rounded-lg bg-light text-secondary p-5 align-self-center">
+    <div class="authForm-container col-6 bg-light border rounded-lg bg-light text-secondary p-5 align-self-center">
         <h3 class="mb-3 text-center">Login</h3>
         <form action="{{route('login')}}" method="post">
             @csrf
@@ -40,6 +41,8 @@
             </div>
                         
             <button type="submit" class="btn btn-primary w-100">Login</button>
+
+            <a href="{{ route('register') }}" class="py-3">Create account</a>
         </form>
     </div>
 </div>

@@ -1,7 +1,6 @@
 .background-container{
-    background: linear-gradient(135deg, rgb(0, 0, 0) 40%, rgb(60,60,60) 40%);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    //background: linear-gradient(135deg, rgb(0, 0, 0) 40%, rgb(60,60,60) 40%);
+    background-color: rgb(245,245,245);
     height: 100vh;
 }
 
@@ -21,7 +20,9 @@
             margin-bottom: 30px;
             border-radius: 20px;
             transition: transform 0.3s;
-            color: white;
+            color: rgb(30,30,30);
+            box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+
             
 
             &:hover{
@@ -55,7 +56,8 @@
                     font-size: 16px;
                     font-weight: bold;
                     letter-spacing: 1px;
-                    margin-bottom: 20px;
+                    margin-bottom: 15px;
+                    color: rgb(30,30,30);
                 }
 
                 .card-text{
@@ -67,18 +69,18 @@
             }
         }
 
-        .lol{
-            background: rgb(0, 96, 128);
-        }
+        // .lol{
+        //     background: rgb(0, 96, 128);
+        // }
 
-        .csgo{
-            background: rgb(204, 122, 0);
+        // .csgo{
+        //     background: rgb(204, 122, 0);
 
-        }
+        // }
         
-        .fortnite{
-            background: purple
-        }
+        // .fortnite{
+        //     background: purple
+        // }
 
     }
 }
@@ -110,7 +112,7 @@
             border-radius: 8px;
             padding: 10px 15px;
             align-self: flex-start;
-
+            width: 150px;
 
             &:hover{
                 cursor: pointer;

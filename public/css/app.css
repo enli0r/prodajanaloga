@@ -74,6 +74,10 @@ header .carousel #slide3 {
     padding-top: auto;
   }
 }
+body {
+  background-color: whitesmoke;
+}
+
 header {
   background: black;
   height: 700px;
@@ -112,6 +116,8 @@ main .card .card-text {
 
 .navbar {
   z-index: 11;
+  background-color: black;
+  margin-bottom: 20px;
 }
 .navbar .container .navbar-brand {
   text-transform: uppercase;
@@ -200,9 +206,7 @@ main .card .card-text {
 }
 
 .background-container {
-  background: linear-gradient(135deg, black 40%, #3c3c3c 40%);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-color: whitesmoke;
   height: 100vh;
 }
 
@@ -219,7 +223,8 @@ main .card .card-text {
   margin-bottom: 30px;
   border-radius: 20px;
   transition: transform 0.3s;
-  color: white;
+  color: #1e1e1e;
+  box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
 }
 .posts-body .posts-container .card:hover {
   transform: translateY(-10px);
@@ -248,21 +253,13 @@ main .card .card-text {
   font-size: 16px;
   font-weight: bold;
   letter-spacing: 1px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  color: #1e1e1e;
 }
 .posts-body .posts-container .card .card-body .card-text {
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 1.5px;
-}
-.posts-body .posts-container .lol {
-  background: #006080;
-}
-.posts-body .posts-container .csgo {
-  background: #cc7a00;
-}
-.posts-body .posts-container .fortnite {
-  background: purple;
 }
 
 #filter-container {
@@ -289,6 +286,7 @@ main .card .card-text {
   border-radius: 8px;
   padding: 10px 15px;
   align-self: flex-start;
+  width: 150px;
 }
 #filter-container .categories button:hover {
   cursor: pointer;
@@ -401,11 +399,6 @@ main .card .card-text {
     min-width: 0;
   }
 }
-#createPost {
-  background: #fff;
-  height: 100vh;
-  background-size: cover;
-}
 #createPost .formContainer {
   display: flex;
   flex-direction: column;
@@ -437,9 +430,10 @@ main .card .card-text {
 #createPost .formContainer .tabcontent {
   display: none;
   padding: 6px 12px;
-  min-width: 500px;
+  width: 700px;
   padding: 0;
   margin-top: 50px;
+  margin-bottom: 50px;
   -webkit-animation: fadeEffect 0.5s;
           animation: fadeEffect 0.5s;
 }
@@ -624,4 +618,9 @@ main .card .card-text {
 }
 #chatPage .userList-container .userList .active {
   background: #1a98ff;
+}
+
+.authForm-container {
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
 }

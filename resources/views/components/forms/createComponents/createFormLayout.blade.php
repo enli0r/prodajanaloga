@@ -17,10 +17,16 @@
     {{ $attributes }}
 
     {{-- Description --}}
-    <textarea name="description" class="form-control formField" id="description">{{old('description')}}</textarea>
-    
+    <div class="form-group">
+        <label for="description">Description</label>
+        <textarea name="description" class="form-control formField" id="description">{{old('description')}}</textarea>
+    </div>
+
     {{-- Price --}}
-    <input type="text" class="form-control formField" id="price" name="price" placeholder="$" value="{{old('price')}}">
+    <div class="form-group">
+        <label for="price">Price</label>
+        <input type="text" class="form-control formField" id="price" name="price" placeholder="$" value="{{old('price')}}">
+    </div>
 
     {{-- Submit --}}
     {{ $submitButton }}
